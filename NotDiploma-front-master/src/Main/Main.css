@@ -1,0 +1,46 @@
+.main-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr; /* Категорії займають 1 частину, віджет - 2 частини */
+  grid-template-rows: auto auto; /* Два ряди: один для категорій/віджета, другий для рекомендацій */
+  grid-gap: 20px;
+  padding: 20px;
+  min-height: 100vh;
+  flex: 1 0 auto;
+}
+
+.categories {
+  /* Твої стилі */
+  max-height: 420px;
+  overflow-y: auto;
+
+  /* Chrome, Edge, Safari */
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE/Edge */
+}
+
+.categories::-webkit-scrollbar {
+  display: none;                /* Chrome, Safari, Opera */
+}
+
+.Widget {
+  background-color: #ccf2f2;
+  padding: 20px;
+  border-radius: 10px;
+  max-height: 360px;
+}
+
+.recommend-bar {
+    grid-column: 1 / -1; /* Розтягнути на всю ширину grid */
+
+  scrollbar-width: thin;
+  scrollbar-color: #adb5bd #e9ecef;
+  /* для Chrome: */
+}
+.recommend-bar::-webkit-scrollbar {
+  height: 8px;
+  background: #e9ecef;
+}
+.recommend-bar::-webkit-scrollbar-thumb {
+  background: #adb5bd;
+  border-radius: 4px;
+}

@@ -1,0 +1,48 @@
+/* Стиль для контейнера випадаючого меню */
+.dropdown {
+    position: absolute; /* Випадкове позиціонування для уникнення перекриття */
+    background-color: white; /* Колір фону меню */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для глибини */
+    border-radius: 4px; /* Кутові радіуси для м'якшого вигляду */
+    z-index: 1000; /* Забезпечує, щоб меню знаходилося вище інших елементів */
+    margin-top: 10px; /* Відступ від кнопки профілю */
+    width: 200px; /* Ширина меню */
+    right: 10px;
+}
+
+.drop-btn{
+    color: black;
+    text-decoration: none;
+    font-size: 1em;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+
+}
+.drop-btn:hover{
+    background-color: #BAECE0;
+}
+/* Стиль для елементів списку */
+.menu-item {
+    padding: 10px 15px; /* Внутрішні відступи для елементів */
+    cursor: pointer; /* Змінює курсор на pointer при наведенні */
+    text-align: center; /* Вирівнює текст ліворуч */
+}
+
+.menu-item:hover {
+    background-color: #ccf2f2; /* Колір фону при наведенні */
+    color: black; /* Колір тексту при наведенні */
+}/* Стиль для виділення при наведенні */
+
+/* Стиль для тексту всередині кнопки профілю */
+.nav-list a {
+    text-decoration: none; /* Видаляє підкреслення */
+    color: #000; /* Колір тексту */
+}
+
+/* Вирівнювання тексту всередині елементів меню */
+.menu-item a {
+    display: block; /* Дозволяє тексту займати всю ширину */
+    width: 100%; /* Займає всю ширину елемента */
+    color: inherit; /* Спадкує колір від батьківського елемента */
+}

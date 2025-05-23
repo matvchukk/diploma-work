@@ -1,0 +1,60 @@
+[
+  {
+    "id": "107a02df-6c17-45b6-a770-21047bd2ff4b",
+    "productName": "Flaxseed Oil",
+    "description": "Flaxseed Oil from organic source",
+    "price": 116.75,
+    "calories": 840,
+    "protein": 0,
+    "fat": 100,
+    "carbs": 0,
+    "isVegan": true,
+    "restrictions": [],
+    "createdAt": "2025-05-18T13:19:52.443371Z",
+    "categoryId": "00000001-0000-0000-0000-00000000000b",
+    "categoryName": "Oils",
+    "sellerId": "3f771be3-1de0-462d-9baf-c9fecba2b1f4",
+    "sellerName": "Organic Space",
+    "averageRating": 4.5
+  },
+  {
+    "id": "118e651f-bf8b-4f3b-bf2d-84ba19626f09",
+    "productName": "Boiled Eggs",
+    "description": "Boiled Eggs from organic source",
+    "price": 6,
+    "calories": 159,
+    "protein": 13,
+    "fat": 10,
+    "carbs": 0.7,
+    "isVegan": false,
+    "restrictions": [
+      "eggs"
+    ],
+    "createdAt": "2025-05-18T13:19:52.446257Z",
+    "categoryId": "c25b84d5-80e2-4ac2-9c6c-348f6034b8ae",
+    "categoryName": "Eggs",
+    "sellerId": "cc8c3aa5-992c-4636-b4f4-002b0c19bd21",
+    "sellerName": "Eco Fresh",
+    "averageRating": 5
+  },
+  {
+    "id": "1aa07214-2916-4b88-8dab-3953bf429b5a",
+    "productName": "Brown Eggs",
+    "description": "Brown Eggs from organic source",
+    "price": 6,
+    "calories": 143,
+    "protein": 13,
+    "fat": 10,
+    "carbs": 1.1,
+    "isVegan": false,
+    "restrictions": [
+      "eggs"
+    ],
+    "createdAt": "2025-05-18T13:19:52.44636Z",
+    "categoryId": "c25b84d5-80e2-4ac2-9c6c-348f6034b8ae",
+    "categoryName": "Eggs",
+    "sellerId": "f31db722-0818-4a11-a15d-8b990cc4e1dd",
+    "sellerName": "BioMarket",
+    "averageRating": 4
+  }
+]

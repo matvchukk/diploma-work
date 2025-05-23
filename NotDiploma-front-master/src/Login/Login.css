@@ -1,0 +1,103 @@
+.box {
+    width: 500px;
+    padding: 40px;
+    position: relative;
+    margin: 100px auto;
+    text-align: center;
+    min-height: calc(100vh - 200px); 
+}
+
+.lrheader {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lrheader header {
+    font-size: 24px;
+    color: #333;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.forgot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.forgot a {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.forgot a:hover {
+    text-decoration: underline;
+}
+
+.input-submit {
+    display: flex;
+    justify-content: center;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #ccf2f2;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: white;
+    border: 2px solid #ccf2f2; /* Додаємо контур при наведенні */
+}
+
+.connect-wallet-button{
+    width: 100% !important;
+    padding: 10px !important;
+    background-color: #ccf2f2 !important;
+    border: none !important;
+    border-radius: 5px !important;
+    color: black !important;
+    font-size: 16px !important;
+    cursor: pointer !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.sign-up-link {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sign-up-link p {
+    font-size: 14px;
+}
+
+.sign-up-link a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-up-link a:hover {
+    text-decoration: underline;
+}

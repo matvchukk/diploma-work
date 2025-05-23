@@ -1,0 +1,229 @@
+{
+  "breakfast": [
+    {
+      "product": {
+        "id": "86362821-5b87-43bf-86db-188c79a75b28",
+        "productName": "Chicken Fillet",
+        "description": "Chicken Fillet from organic source",
+        "price": 12,
+        "calories": 165,
+        "protein": 31,
+        "fat": 3.6,
+        "carbs": 0,
+        "isVegan": false,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.441988Z",
+        "categoryId": "00000001-0000-0000-0000-000000000007",
+        "categoryName": "Meat and sausages",
+        "sellerId": "49ab6c94-77c5-40a9-b84c-d26710f9f9b5",
+        "sellerName": "Healthy Basket",
+        "averageRating": 0
+      },
+      "grams": 200
+    },
+    {
+      "product": {
+        "id": "118e651f-bf8b-4f3b-bf2d-84ba19626f09",
+        "productName": "Boiled Eggs",
+        "description": "Boiled Eggs from organic source",
+        "price": 6,
+        "calories": 159,
+        "protein": 13,
+        "fat": 10,
+        "carbs": 0.7,
+        "isVegan": false,
+        "restrictions": [
+          "eggs"
+        ],
+        "createdAt": "2025-05-18T13:19:52.446257Z",
+        "categoryId": "c25b84d5-80e2-4ac2-9c6c-348f6034b8ae",
+        "categoryName": "Eggs",
+        "sellerId": "cc8c3aa5-992c-4636-b4f4-002b0c19bd21",
+        "sellerName": "Eco Fresh",
+        "averageRating": 5
+      },
+      "grams": 150
+    },
+    {
+      "product": {
+        "id": "346ed39b-45c2-403e-91f2-6dd8819aa7df",
+        "productName": "Bell Peppers",
+        "description": "Bell Peppers from organic source",
+        "price": 20.71,
+        "calories": 90,
+        "protein": 5.3,
+        "fat": 10.8,
+        "carbs": 30.1,
+        "isVegan": true,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.439656Z",
+        "categoryId": "00000001-0000-0000-0000-000000000001",
+        "categoryName": "Vegetables",
+        "sellerId": "a88c0d75-42cc-427a-bbdb-00cbdac4bed7",
+        "sellerName": "Green Mart",
+        "averageRating": 0
+      },
+      "grams": 100
+    },
+    {
+      "product": {
+        "id": "107a02df-6c17-45b6-a770-21047bd2ff4b",
+        "productName": "Flaxseed Oil",
+        "description": "Flaxseed Oil from organic source",
+        "price": 116.75,
+        "calories": 840,
+        "protein": 0,
+        "fat": 100,
+        "carbs": 0,
+        "isVegan": true,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.443371Z",
+        "categoryId": "00000001-0000-0000-0000-00000000000b",
+        "categoryName": "Oils",
+        "sellerId": "3f771be3-1de0-462d-9baf-c9fecba2b1f4",
+        "sellerName": "Organic Space",
+        "averageRating": 4.5
+      },
+      "grams": 0
+    }
+  ],
+  "lunch": [
+    {
+      "product": {
+        "id": "aba36ee5-ccd2-4eac-88fc-03e1bdebcaa8",
+        "productName": "Turkey Breast",
+        "description": "Turkey Breast from organic source",
+        "price": 24.34,
+        "calories": 147,
+        "protein": 30,
+        "fat": 2,
+        "carbs": 0,
+        "isVegan": false,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.442087Z",
+        "categoryId": "00000001-0000-0000-0000-000000000007",
+        "categoryName": "Meat and sausages",
+        "sellerId": "f31db722-0818-4a11-a15d-8b990cc4e1dd",
+        "sellerName": "BioMarket",
+        "averageRating": 0
+      },
+      "grams": 200
+    },
+    {
+      "product": {
+        "id": "1aa07214-2916-4b88-8dab-3953bf429b5a",
+        "productName": "Brown Eggs",
+        "description": "Brown Eggs from organic source",
+        "price": 6,
+        "calories": 143,
+        "protein": 13,
+        "fat": 10,
+        "carbs": 1.1,
+        "isVegan": false,
+        "restrictions": [
+          "eggs"
+        ],
+        "createdAt": "2025-05-18T13:19:52.44636Z",
+        "categoryId": "c25b84d5-80e2-4ac2-9c6c-348f6034b8ae",
+        "categoryName": "Eggs",
+        "sellerId": "f31db722-0818-4a11-a15d-8b990cc4e1dd",
+        "sellerName": "BioMarket",
+        "averageRating": 4
+      },
+      "grams": 150
+    },
+    {
+      "product": {
+        "id": "a1ea7cfb-22e9-4404-81e8-a1ae984c20ca",
+        "productName": "Pita",
+        "description": "Pita from organic source",
+        "price": 22.14,
+        "calories": 275,
+        "protein": 9.1,
+        "fat": 1.2,
+        "carbs": 56,
+        "isVegan": true,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.44132Z",
+        "categoryId": "00000001-0000-0000-0000-000000000005",
+        "categoryName": "Bread and pastries",
+        "sellerId": "3f771be3-1de0-462d-9baf-c9fecba2b1f4",
+        "sellerName": "Organic Space",
+        "averageRating": 0
+      },
+      "grams": 150
+    }
+  ],
+  "dinner": [
+    {
+      "product": {
+        "id": "8b24ac76-979b-4186-ab93-436d9164b3b7",
+        "productName": "Beef Steak",
+        "description": "Beef Steak from organic source",
+        "price": 16,
+        "calories": 250,
+        "protein": 26,
+        "fat": 15,
+        "carbs": 0,
+        "isVegan": false,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.44205Z",
+        "categoryId": "00000001-0000-0000-0000-000000000007",
+        "categoryName": "Meat and sausages",
+        "sellerId": "cc8c3aa5-992c-4636-b4f4-002b0c19bd21",
+        "sellerName": "Eco Fresh",
+        "averageRating": 0
+      },
+      "grams": 250
+    },
+    {
+      "product": {
+        "id": "1c2ad60f-cffd-41de-a014-155d6401af2e",
+        "productName": "Organic Eggs",
+        "description": "Organic Eggs from organic source",
+        "price": 6,
+        "calories": 143,
+        "protein": 13,
+        "fat": 10,
+        "carbs": 1.1,
+        "isVegan": false,
+        "restrictions": [
+          "eggs"
+        ],
+        "createdAt": "2025-05-18T13:19:52.446316Z",
+        "categoryId": "c25b84d5-80e2-4ac2-9c6c-348f6034b8ae",
+        "categoryName": "Eggs",
+        "sellerId": "f31db722-0818-4a11-a15d-8b990cc4e1dd",
+        "sellerName": "BioMarket",
+        "averageRating": 0
+      },
+      "grams": 150
+    },
+    {
+      "product": {
+        "id": "15a9a2f9-8372-44eb-8dab-56e7673e7fc7",
+        "productName": "Corn Oil",
+        "description": "Corn Oil from organic source",
+        "price": 41.66,
+        "calories": 846.2,
+        "protein": 0,
+        "fat": 100,
+        "carbs": 0,
+        "isVegan": true,
+        "restrictions": [],
+        "createdAt": "2025-05-18T13:19:52.443457Z",
+        "categoryId": "00000001-0000-0000-0000-00000000000b",
+        "categoryName": "Oils",
+        "sellerId": "f31db722-0818-4a11-a15d-8b990cc4e1dd",
+        "sellerName": "BioMarket",
+        "averageRating": 5
+      },
+      "grams": 0
+    }
+  ],
+  "totalPrice": 193.6,
+  "totalCalories": 2419,
+  "totalProtein": 264.45000000000005,
+  "totalFat": 106.3,
+  "totalCarbs": 118.45000000000002
+}
