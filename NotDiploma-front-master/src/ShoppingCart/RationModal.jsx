@@ -3,10 +3,10 @@ import { useState } from 'react';
 import { addToCartBatch } from '../api/cart';
 
 const NUTRIENT_COLOR = {
-  'Калорії': 'warning',
-  'Білки': 'success',
-  'Жири': 'danger',
-  'Вуглеводи': 'info',
+  'Calories': 'warning',
+  'Protein': 'success',
+  'Fat': 'danger',
+  'Carbs': 'info',
 };
 
 function NutrientChip({ label, value }) {
@@ -28,7 +28,7 @@ function MealCard({ meal, items, mealKey, onRecipeClick, recipe, recipeLoading, 
               <div>
                 <div className="d-flex justify-content-between align-items-start mb-1">
                   <span className="fw-bold">{product.productName}</span>
-                  <span className="ration-grams">{grams} г</span>
+                  <span className="ration-grams">{grams} g</span>
                 </div>
                 <div className="mb-1" style={{ fontSize: 13, color: "#888" }}>
                   {product.categoryName || ''}
@@ -40,10 +40,10 @@ function MealCard({ meal, items, mealKey, onRecipeClick, recipe, recipeLoading, 
                 </div>
               </div>
               <div className="d-flex flex-wrap mt-2 gap-2">
-                <NutrientChip label="Калорії" value={product.calories} />
-                <NutrientChip label="Білки" value={product.protein} />
-                <NutrientChip label="Жири" value={product.fat} />
-                <NutrientChip label="Вуглеводи" value={product.carbs} />
+                <NutrientChip label="Calories" value={product.calories} />
+                <NutrientChip label="Protein" value={product.protein} />
+                <NutrientChip label="Fat" value={product.fat} />
+                <NutrientChip label="Carbs" value={product.carbs} />
               </div>
             </div>
           </Col>
@@ -58,10 +58,10 @@ function MealCard({ meal, items, mealKey, onRecipeClick, recipe, recipeLoading, 
         >
           {recipeLoading ? (
             <>
-              <Spinner size="sm" animation="border" /> Генеруємо...
+              <Spinner size="sm" animation="border" /> ...
             </>
           ) : (
-            "Рецепт"
+            "Recipe"
           )}
         </Button>
         {recipe && (
@@ -98,10 +98,10 @@ export default function RationModal({ show, onClose, ration }) {
     setRecipes(prev => ({ ...prev, [mealKey]: "" }));
 
     const productsList = items
-      .map(({ product, grams }) => `${product?.productName || ""} (${grams} г)`)
+      .map(({ product, grams }) => `${product?.productName || ""} (${grams} g)`)
       .join(", ");
 
-    const prompt = `Сгенеруй простий український рецепт для прийому їжі "${mealName}" зі складу: ${productsList}. Вкажи коротко, що з цього приготувати і як.`;
+    const prompt = `Generate a recipe for one meal (${mealName}) from the following ingredients: ${productsList}. Briefly tell me what to cook from this and how.`;
 
     try {
       const res = await fetch("https://api.openai.com/v1/chat/completions", {
@@ -124,11 +124,11 @@ export default function RationModal({ show, onClose, ration }) {
       const data = await res.json();
       const recipe =
         data?.choices?.[0]?.message?.content?.trim() ||
-        "Не вдалося згенерувати рецепт.";
+        "Failed to generate recipe.";
       setRecipes(prev => ({ ...prev, [mealKey]: recipe }));
     } catch (e) {
       console.log(e);
-      setRecipes(prev => ({ ...prev, [mealKey]: "Помилка генерації рецепта." }));
+      setRecipes(prev => ({ ...prev, [mealKey]: "Recipe generation error." }));
     } finally {
       setRecipeLoading(prev => ({ ...prev, [mealKey]: false }));
     }
@@ -157,13 +157,13 @@ export default function RationModal({ show, onClose, ration }) {
       });
 
       if (products.length === 0) {
-        setError('Немає товарів для додавання до кошика.');
+        setError('There are no items to add to cart.');
         setIsLoading(false);
         return;
       }
 
       await addToCartBatch(products);
-      setSuccess('Товари успішно додано до кошика!');
+      setSuccess('Products successfully added to cart!');
       setTimeout(() => {
         setSuccess('');
         onClose();
@@ -171,7 +171,7 @@ export default function RationModal({ show, onClose, ration }) {
     } catch (e) {
       setError(
         e.response?.data?.error ||
-        'Не вдалося додати товари до кошика. Спробуйте ще раз.'
+        'Unable to add items to cart. Please try again.'
       );
     } finally {
       setIsLoading(false);
@@ -180,14 +180,14 @@ export default function RationModal({ show, onClose, ration }) {
 
   const summaryBlock = (
     <div className="ration-summary mt-4">
-      <div className="fw-semibold mb-2">Загалом:</div>
+      <div className="fw-semibold mb-2">Total:</div>
       <div className="d-flex flex-wrap gap-3">
-        <NutrientChip label="Калорії" value={ration.totalCalories?.toFixed(2)} />
-        <NutrientChip label="Білки" value={ration.totalProtein?.toFixed(2)} />
-        <NutrientChip label="Жири" value={ration.totalFat?.toFixed(2)} />
-        <NutrientChip label="Вуглеводи" value={ration.totalCarbs?.toFixed(2)} />
+        <NutrientChip label="Calories" value={ration.totalCalories?.toFixed(2)} />
+        <NutrientChip label="Protein" value={ration.totalProtein?.toFixed(2)} />
+        <NutrientChip label="Fat" value={ration.totalFat?.toFixed(2)} />
+        <NutrientChip label="Carbs" value={ration.totalCarbs?.toFixed(2)} />
         <span style={{ fontWeight: 500, fontSize: 15 }}>
-          Вартість: {ration.totalPrice?.toFixed(2)} UAH
+          Price: {ration.totalPrice?.toFixed(2)} UAH
         </span>
       </div>
     </div>
@@ -196,11 +196,11 @@ export default function RationModal({ show, onClose, ration }) {
   return (
     <Modal show={show} onHide={onClose} centered size="lg">
       <Modal.Header closeButton>
-        <Modal.Title>Рекомендований раціон на день</Modal.Title>
+        <Modal.Title>Recommended daily diet</Modal.Title>
       </Modal.Header>
       <Modal.Body>
         <div className="text-muted mb-3" style={{ fontSize: 13 }}>
-          *параметри КБЖУ вказані на 100г продукту
+          *nutritional values are indicated per 100g of product.
         </div>
         {['breakfast', 'lunch', 'dinner'].map(meal =>
           ration[meal] && ration[meal].length > 0
@@ -229,10 +229,10 @@ export default function RationModal({ show, onClose, ration }) {
           onClick={handleAddToCart}
           disabled={isLoading}
         >
-          {isLoading ? <Spinner size="sm" animation="border" /> : "Додати ці товари до кошика"}
+          {isLoading ? <Spinner size="sm" animation="border" /> : "Add these items to cart"}
         </Button>
         <Button className="btn btn-secondary" onClick={onClose} disabled={isLoading}>
-          Закрити
+          Exit
         </Button>
       </Modal.Footer>
       <style>
